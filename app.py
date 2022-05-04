@@ -1,4 +1,5 @@
 import os
+import sqlite3
 
 from flask import Flask, flash, redirect, render_template, request, session
 from flask_session import Session
@@ -21,6 +22,7 @@ def after_request(response):
 def index():
     if request.method == "POST":
         email = request.form.get("email")
+        #use sqlite3 database
         #store in a sql database 
 
         return redirect("/")
